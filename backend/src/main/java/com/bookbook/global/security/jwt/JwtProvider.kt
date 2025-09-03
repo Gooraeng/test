@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional
 import java.security.Key
 import java.time.LocalDateTime
 import java.time.ZoneId
-import java.util.Date
+import java.util.*
 
 @Component
 class JwtProvider(
@@ -156,7 +156,7 @@ class JwtProvider(
             path = "/"
             this.maxAge = maxAge
             this.setAttribute("SameSite", "None")
-            domain = "bookbook.fly.dev"
+            this.setAttribute("Partitioned", "")
         }
     }
 }

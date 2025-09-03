@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for backend-morning-resonance-6527 on 2025-09-03T22:28:59+09:00
+# fly.toml app configuration file generated for backend-morning-resonance-6527 on 2025-09-03T23:17:25+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -6,24 +6,21 @@
 app = 'backend-morning-resonance-6527'
 primary_region = 'sin'
 
-[build]
-
-[http_service]
+[[services]]
   internal_port = 8080
-  force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = "stop"
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
 
-[[http_service.ports]]
+[[services.ports]]
 port = 80
 handlers = ["http"]
 force_https = true
 
-[[http_service.ports]]
+[[services.ports]]
 port = 443
-handlers = ["tls", "https"]
+handlers = ["tls", "http"]
 
 [[vm]]
   memory = '1gb'
