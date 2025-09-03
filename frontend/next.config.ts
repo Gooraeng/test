@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: '/api/:path*',
-                destination: 'https://bookbook.fly.dev/api/:path*',
+                destination: 'https://test-six-rosy-25.vercel.app/api/:path*',
             },
         ];
     },
@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'bookbook.fly.dev',
+                hostname: 'test-six-rosy-25.vercel.app',
                 port: '',
                 pathname: '/**',
             },
